@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
-import { Cover } from './styles';
+import { Cover, TableRow } from './styles';
 
 export const TvShow: FC<TvShowFormattedType> = ({
+  id,
   cover,
   name,
   rating,
@@ -10,7 +11,7 @@ export const TvShow: FC<TvShowFormattedType> = ({
   genres,
   country,
 }) => (
-  <tr>
+  <TableRow isEven={!(id % 2)}>
     <td>
       <Cover
         alt="Cover"
@@ -22,5 +23,5 @@ export const TvShow: FC<TvShowFormattedType> = ({
     <td>{country || '---'}</td>
     <td>{`${duration} минут`}</td>
     <td>{rating || '---'}</td>
-  </tr>
+  </TableRow>
 );

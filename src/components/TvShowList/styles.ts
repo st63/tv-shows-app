@@ -7,5 +7,6 @@ export const TvShowListBox = styled.div`
 `;
 
 export const Table = styled.table`
+  border-collapse: collapse;
   margin-bottom: 30px;
 `;
