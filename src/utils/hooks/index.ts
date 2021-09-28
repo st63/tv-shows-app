@@ -1,5 +1,5 @@
-import { useTable } from './useTable';
+import { useTvShowList } from './useTvShowList';
 
 export {
-  useTable,
+  useTvShowList,
 };

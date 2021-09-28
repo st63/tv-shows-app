@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { TvShowFormattedType } from '../../types';
+import { Cover } from './styles';
 
-export const TableRow: FC<TvShowFormattedType> = ({
+export const TvShow: FC<TvShowFormattedType> = ({
   cover,
   name,
   rating,
@@ -12,14 +12,13 @@ export const TableRow: FC<TvShowFormattedType> = ({
 }) => (
   <tr>
     <td>
-      <img
-        width="30px"
-        alt="Обложка шоу"
+      <Cover
+        alt="Cover"
         src={cover}
       />
     </td>
     <td>{name}</td>
-    <td>{genres.length ? genres.map((genre: string) => <p>{genre}</p>) : '---'}</td>
+    <td>{genres.length ? genres.map((genre: string) => genre) : '---'}</td>
     <td>{country || '---'}</td>
     <td>{`${duration} минут`}</td>
     <td>{rating || '---'}</td>

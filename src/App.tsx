@@ -1,11 +1,11 @@
 import React from 'react';
 import { AppContainer } from './styles';
-import { Table } from './components/Table';
+import { TvShowList } from './components/TvShowList';
 
 function App() {
   return (
     <AppContainer>
-      <Table />
+      <TvShowList />
     </AppContainer>
   );
 }

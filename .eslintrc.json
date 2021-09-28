@@ -59,6 +59,8 @@
       "no-use-before-define": [0],
       "@typescript-eslint/no-use-before-define": [1],
       "no-shadow": "off",
-      "no-undef": "off"
+      "no-undef": "off",
+      "linebreak-style": 0,
+      "no-unused-vars": 0
   }
 }

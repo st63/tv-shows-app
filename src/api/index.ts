@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-import { TvShowInitialType, TvShowFormattedType } from '../types';
-
-const mapTvShows = (tvShow: TvShowInitialType) => {
+const mapTvShow = (tvShow: TvShowInitialType) => {
   const {
     id, image, genres, name, rating, weight, network,
   } = tvShow;
@@ -18,8 +16,8 @@ const mapTvShows = (tvShow: TvShowInitialType) => {
   };
 };
 
-export const getTVShows = async (): Promise<TvShowFormattedType[]> => {
+export const getTVShow = async (): Promise<TvShowFormattedType[]> => {
   const { data } = await axios.get('http://api.tvmaze.com/shows?page=1');
 
-  return data.map(mapTvShows);
+  return data.map(mapTvShow);
 };

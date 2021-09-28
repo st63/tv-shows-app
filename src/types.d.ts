@@ -13,7 +13,7 @@ type CountryType = {
   }
 }
 
-export type TvShowInitialType = {
+type TvShowInitialType = {
   id: number
   image: CoverType
   genres: string[]
@@ -23,7 +23,7 @@ export type TvShowInitialType = {
   network: CountryType
 }
 
-export type TvShowFormattedType = {
+type TvShowFormattedType = {
   id: number
   cover: string
   genres: string[]
