@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-import { getTVShow } from '../../api';
+import { getTVShow } from '../../api/getTVShow';
 import { TV_SHOWS_PER_PAGE } from '../../constants';
 
 export const useTvShowList = () => {
@@ -15,7 +15,10 @@ export const useTvShowList = () => {
   );
   const pageCount: number = Math.ceil(tvShow.length / TV_SHOWS_PER_PAGE);
 
-  const paginate = (currentPage: number) => setCurrentPage(currentPage);
+  const paginate = useCallback(
+    (event: any) => setCurrentPage(+event.currentTarget.value),
+    [currentPage],
+  );
 
   const nextPage = useCallback(
     () => setCurrentPage((currentPage) => currentPage + 1),

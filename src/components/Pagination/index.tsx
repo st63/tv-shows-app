@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react';
+import { FC } from 'react';
 import { Button, Grid } from '@material-ui/core';
 
 import { PaginationContainer, PrevNextButtons, NumbersButtons } from './styles';
@@ -6,7 +6,7 @@ import { PaginationContainer, PrevNextButtons, NumbersButtons } from './styles';
 type PaginationPropsType = {
   pageCount: number;
   pageNumbers: number[] | [];
-  paginate: (currentPage: number) => void;
+  paginate: (event: any) => void;
   prevPage: () => void;
   nextPage: () => void;
   currentPage: number;
@@ -26,8 +26,9 @@ export const Pagination: FC<PaginationPropsType> = ({
         <Grid item key={number}>
           <Button
             size="small"
-            onClick={useCallback(() => paginate(number), [currentPage])}
+            onClick={paginate}
             variant={currentPage === number ? 'contained' : 'outlined'}
+            value={number}
           >
             {number}
           </Button>
