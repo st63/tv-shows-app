@@ -15,10 +15,7 @@ export const useTvShowList = () => {
   );
   const pageCount: number = Math.ceil(tvShow.length / TV_SHOWS_PER_PAGE);
 
-  const paginate = useCallback(
-    (currentPage: number) => setCurrentPage(currentPage),
-    [currentPage],
-  );
+  const paginate = (currentPage: number) => setCurrentPage(currentPage);
 
   const nextPage = useCallback(
     () => setCurrentPage((currentPage) => currentPage + 1),
@@ -35,17 +32,13 @@ export const useTvShowList = () => {
       try {
         const tvShow = await getTVShow();
         setTvShows(tvShow);
-      } catch (Error) {
-        console.error(Error);
+      } catch (error) {
+        console.error(error);
       }
     })();
   }, []);
 
-  const pageNumbers = [];
-
-  for (let i = 1; i <= pageCount; i++) {
-    pageNumbers.push(i);
-  }
+  const pageNumbers = Array.from({ length: pageCount }, (v, k) => k + 1);
 
   return {
     tvShow: tvShowOnCurrentPage,

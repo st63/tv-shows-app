@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { TvShowListHeader } from '../TvShowListHeader';
-import { TvShowListBody } from '../TvShowListBody';
-import { Pagination } from '../Pagination';
+import { TvShowListHeader } from '../../components/TvShowListHeader';
+import { TvShowListBody } from '../../components/TvShowListBody';
+import { Pagination } from '../../components/Pagination';
 import { TvShowListBox, Table } from './styles';
 import { useTvShowList } from '../../utils/hooks';
 

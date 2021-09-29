@@ -28,7 +28,7 @@ type TvShowFormattedType = {
   cover: string
   genres: string[]
   name: string
-  rating: number
+  rating: number | null
   duration: number
   country: string
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppContainer } from './styles';
-import { TvShowList } from './components/TvShowList';
+import { TvShowList } from './containers/TvShowList';
 
 function App() {
   return (
