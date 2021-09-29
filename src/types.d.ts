@@ -1,5 +1,5 @@
 type CoverType = {
-  medium?: string
+  medium: string
   original: string
 }
 

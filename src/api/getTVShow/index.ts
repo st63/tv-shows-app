@@ -7,7 +7,7 @@ const mapTvShow = (tvShow: TvShowInitialType): TvShowFormattedType => {
 
   return {
     id,
-    cover: image.original,
+    cover: image.medium,
     genres,
     name,
     rating: rating.average,
